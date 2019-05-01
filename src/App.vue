@@ -1,14 +1,7 @@
 <template>
   <div id="app">
     <div class="left-wrapper">
-      <img alt="Oeko-Tex Certificate" src="./assets/img/oekotex_de.png" class="oekotex-logo">
-      <div class="wrapper-slider">
-        <ul class="slides">
-          <li class="slide" style="opacity: 1" v-for="index in 5">
-            <img :src="getImage(index)" alt="">
-          </li>
-        </ul>
-      </div>
+      <ImgDiaper :index=isActive+1></ImgDiaper>
     </div>
     <div class="right-wrapper">
       <h2>Unser gratis Testpaket</h2>
@@ -44,12 +37,12 @@
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import ImgDiaper from './components/ImgDiaper.vue'
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    ImgDiaper
   },
   data: function () {
    return {
@@ -93,29 +86,6 @@ export default {
     overflow: hidden;
     width: 50%;
     float: left;
-
-    img.oekotex-logo {
-      position: absolute;
-      top: 10%;
-      left: 9%;
-      z-index: 10%;
-      width: 27%;
-      max-width: 100%;
-      display: inline-block;
-      height: auto;
-    }
-
-    .slide {
-      display: block;
-      position: relative;
-      margin-top: -8%;
-      z-index: -2;
-      float: left;
-
-      img {
-        max-width: 100%
-      }
-    }
   }
 
   .right-wrapper,{

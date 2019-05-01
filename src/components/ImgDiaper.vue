@@ -41,7 +41,7 @@ export default {
     height: auto;
   }
 
-  .slide {
+  .slider {
     display: block;
     position: relative;
     margin-top: -8%;
@@ -49,7 +49,7 @@ export default {
     float: left;
 
     img {
-      max-width: 100%
+      max-width: 95%
     }
   }
 </style>

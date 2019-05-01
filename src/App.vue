@@ -4,11 +4,8 @@
       <img alt="Oeko-Tex Certificate" src="./assets/img/oekotex_de.png" class="oekotex-logo">
       <div class="wrapper-slider">
         <ul class="slides">
-        <!--<li class="slide" style="opacity: 1">
-            <img v-bind:src="'.assets/img/lillydoo-testpaket-' + index + '0jpg'" alt="">
-          </li>-->
-          <li class="slide" style="opacity: 1">
-            <img src="./assets/img/lillydoo-testpaket-20.jpg" alt="">
+          <li class="slide" style="opacity: 1" v-for="index in 5">
+            <img :src="getImage(index)" alt="">
           </li>
         </ul>
       </div>
@@ -59,6 +56,11 @@ export default {
      isActive: undefined,
      trialPacks: ['(2-3 KG)', '(3-4 KG)', '(4-7 KG)', '(7-10 KG)', '(10-12 KG)']
    }
+ },
+ methods: {
+   getImage(index) {
+  return require(`./assets/img/lillydoo-testpaket-${index}0.jpg`)
+  }
  }
 }
 </script>

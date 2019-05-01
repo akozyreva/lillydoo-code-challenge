@@ -1,7 +1,6 @@
 <template>
   <div id="app">
     <div class="left-wrapper">
-
     </div>
     <div class="right-wrapper">
       <h2>Unser gratis Testpaket</h2>
@@ -18,9 +17,11 @@
         </ul>
       </div>
       <p>Teste jetzt unsere Windeln und Feuchttücher - In Größe 1 - 3 enthält unser Testpaket unsere Feuchttücher mit 99 % Wasser, ab Gr. 4 erhältst Du unsere Sensitiven Feuchttücher. Wir zahlen die Produkte, Du nur den Versand.</p>
-      <ul>
-        <li>Automatischer Übergang ins jederzeit kündbare Windel-Abo für 49,50 € pro Lieferung.</li>
-        <li>Preise inkl. MwSt., ggf. zzgl. Versandkosten</li>
+      <ul class="product-list">
+        <li class="turquoise-color">Automatischer Übergang ins jederzeit kündbare Windel-Abo für 49,50 € pro Lieferung.</li>
+        <li>Preise inkl. MwSt., ggf. zzgl.
+          <a href="#" class="turquoise-color">Versandkosten</a>
+          </li>
       </ul>
       <div class="wrapper-button">
         <button type="button" name="button">
@@ -123,6 +124,40 @@ export default {
     }
     li.active {
       @extend %active-pack;
+    }
+  }
+
+  .product-list {
+    margin-left: 1.1rem;
+    line-height: 1.4;
+    font-size: .938rem;
+
+    .turquoise-color {
+      color: $turquoise;
+    }
+  }
+
+  .wrapper-button {
+    margin: 20px 0;
+
+     :hover {
+      cursor: pointer;
+      background-color: #99dfdd;
+    }
+
+    button {
+      width: 100%;
+      padding: 0 20px;
+      height: 45px;
+      min-width: 16rem;
+      text-transform: uppercase;
+      background-color: $turquoise;
+
+
+      span {
+        font-size: 1.063rem;
+        color: #fff;
+      }
     }
   }
 }

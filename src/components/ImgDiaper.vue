@@ -2,11 +2,9 @@
     <div>
       <img alt="Oeko-Tex Certificate" src="@/assets/img/oekotex_de.png" class="oekotex-logo">
       <div class="wrapper-slider">
-        <ul class="slides">
-          <li class="slide">
-            <img :src="getImage(index)" alt="">
-          </li>
-        </ul>
+        <div class="slider">
+          <img :src="getImage(index)" alt="">
+        </div>
       </div>
     </div>
     </div>

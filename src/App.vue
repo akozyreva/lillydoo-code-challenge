@@ -8,10 +8,9 @@
       <div class="pack-container">
         <p class="subtitle">Wähle Deine Größe</p>
         <ul class="trial-pack-wrapper">
-          <li v-for="(pack, index) in trialPacks" :key="index" 
-           @mouseover="isActive=true"
-           @mouseout="isActive=false"
-           v-bind:class="{ active: isActive }"
+          <li v-for="(pack, index) in trialPacks" :key="index"
+           @click="isActive=index"
+           v-bind:class="{ active: isActive === index }"
           >
             <p>{{ index + 1}}</p>
             <span>  {{ pack }}</span>
@@ -45,7 +44,7 @@ export default {
   },
   data: function () {
    return {
-     isActive: false,
+     isActive: undefined,
      trialPacks: ['(2-3 KG)', '(3-4 KG)', '(4-7 KG)', '(7-10 KG)', '(10-12 KG)']
    }
  }
@@ -53,6 +52,14 @@ export default {
 </script>
 
 <style  lang="scss">
+
+%active-pack {
+  background-color: $turquoise;
+  color: #fff;
+  border-color: $turquoise;
+}
+
+
 #app {
   font-family: "Cera-Regular",Arial,sans-serif;
   /*-webkit-font-smoothing: antialiased;
@@ -90,6 +97,11 @@ export default {
     margin: 0;
     line-height: 1.4;
 
+    > li:hover {
+      @extend %active-pack;
+      cursor: pointer;
+    }
+
     li {
       color: $grey;
       border: 1px solid $grey;
@@ -110,9 +122,7 @@ export default {
       }
     }
     li.active {
-      background-color: $turquoise;
-      color: #fff;
-      border-color: $turquoise;
+      @extend %active-pack;
     }
   }
 }

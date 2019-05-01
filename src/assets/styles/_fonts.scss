@@ -2,3 +2,19 @@
   font-family: "Cera-Regular";
   src: url("assets/fonts/Cera-Regular.woff2") format("woff2");
 }
+
+h2 {
+  font-size: 1.688rem;
+  line-height: 1.2;
+  text-transform: none;
+  margin-bottom: 10px;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+ul, li {
+  padding: 0;
+}

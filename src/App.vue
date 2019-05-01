@@ -1,7 +1,37 @@
 <template>
   <div id="app">
+    <div class="left-wrapper">
+
+    </div>
+    <div class="right-wrapper">
+      <h2>Unser gratis Testpaket</h2>
+      <div class="pack-container">
+        <p class="subtitle">Wähle Deine Größe</p>
+        <ul class="trial-pack-wrapper">
+          <li v-for="(pack, index) in trialPacks" :key="index" 
+           @mouseover="isActive=true"
+           @mouseout="isActive=false"
+           v-bind:class="{ active: isActive }"
+          >
+            <p>{{ index + 1}}</p>
+            <span>  {{ pack }}</span>
+          </li>
+        </ul>
+      </div>
+      <p>Teste jetzt unsere Windeln und Feuchttücher - In Größe 1 - 3 enthält unser Testpaket unsere Feuchttücher mit 99 % Wasser, ab Gr. 4 erhältst Du unsere Sensitiven Feuchttücher. Wir zahlen die Produkte, Du nur den Versand.</p>
+      <ul>
+        <li>Automatischer Übergang ins jederzeit kündbare Windel-Abo für 49,50 € pro Lieferung.</li>
+        <li>Preise inkl. MwSt., ggf. zzgl. Versandkosten</li>
+      </ul>
+      <div class="wrapper-button">
+        <button type="button" name="button">
+          <span>In den Warenkorb legen</span>
+        </button>
+      </div>
+    </div>
+<!--
     <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <HelloWorld msg="Welcome to Your Vue.js App"/> -->
   </div>
 </template>
 
@@ -12,17 +42,78 @@ export default {
   name: 'app',
   components: {
     HelloWorld
-  }
+  },
+  data: function () {
+   return {
+     isActive: false,
+     trialPacks: ['(2-3 KG)', '(3-4 KG)', '(4-7 KG)', '(7-10 KG)', '(10-12 KG)']
+   }
+ }
 }
 </script>
 
 <style  lang="scss">
 #app {
   font-family: "Cera-Regular",Arial,sans-serif;
-  -webkit-font-smoothing: antialiased;
+  /*-webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  margin-top: 60px;*/
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+  padding: 2rem 0 2rem 0;
+  max-width: 80rem;
+  width: 100%;
+
+  .right-wrapper, .left-wrapper{
+    width: 41%;
+    float: right;
+
+    .pack-container {
+      margin-bottom: 30px;
+    }
+  }
+
+  .subtitle {
+    text-transform: uppercase;
+    line-height: 1.4;
+    font-weight: 400;
+    font-size: .938rem;
+  }
+
+  ul.trial-pack-wrapper {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    margin: 0;
+    line-height: 1.4;
+
+    li {
+      color: $grey;
+      border: 1px solid $grey;
+      text-align: center;
+      width: 30%;
+      padding: 7px 5px 2px 5px;
+      margin-right: 10px;
+      position: relative;
+
+      p {
+        font-size: 1.3rem;
+        line-height: 1;
+        margin: 0;
+      }
+
+      span {
+        font-size: .8rem;
+      }
+    }
+    li.active {
+      background-color: $turquoise;
+      color: #fff;
+      border-color: $turquoise;
+    }
+  }
 }
 </style>

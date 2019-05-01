@@ -1,6 +1,17 @@
 <template>
   <div id="app">
     <div class="left-wrapper">
+      <img alt="Oeko-Tex Certificate" src="./assets/img/oekotex_de.png" class="oekotex-logo">
+      <div class="wrapper-slider">
+        <ul class="slides">
+        <!--<li class="slide" style="opacity: 1">
+            <img v-bind:src="'.assets/img/lillydoo-testpaket-' + index + '0jpg'" alt="">
+          </li>-->
+          <li class="slide" style="opacity: 1">
+            <img src="./assets/img/lillydoo-testpaket-20.jpg" alt="">
+          </li>
+        </ul>
+      </div>
     </div>
     <div class="right-wrapper">
       <h2>Unser gratis Testpaket</h2>
@@ -75,7 +86,37 @@ export default {
   max-width: 80rem;
   width: 100%;
 
-  .right-wrapper, .left-wrapper{
+  .left-wrapper{
+    position: relative;
+    overflow: hidden;
+    width: 50%;
+    float: left;
+
+    img.oekotex-logo {
+      position: absolute;
+      top: 10%;
+      left: 9%;
+      z-index: 10%;
+      width: 27%;
+      max-width: 100%;
+      display: inline-block;
+      height: auto;
+    }
+
+    .slide {
+      display: block;
+      position: relative;
+      margin-top: -8%;
+      z-index: -2;
+      float: left;
+
+      img {
+        max-width: 100%
+      }
+    }
+  }
+
+  .right-wrapper,{
     width: 41%;
     float: right;
 

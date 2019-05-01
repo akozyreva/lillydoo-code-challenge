@@ -44,12 +44,12 @@ export default {
   .slider {
     display: block;
     position: relative;
-    margin-top: -8%;
+    margin-top: -4%;
     z-index: -2;
     float: left;
 
     img {
-      max-width: 95%
+      max-width: 100%
     }
   }
 </style>

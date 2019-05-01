@@ -144,6 +144,7 @@ export default {
     margin-left: 1.1rem;
     line-height: 1.4;
     font-size: .938rem;
+    margin-bottom: 2rem;
 
     .turquoise-color {
       color: $turquoise;

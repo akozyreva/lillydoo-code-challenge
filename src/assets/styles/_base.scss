@@ -8,6 +8,7 @@ h2 {
 body {
   padding: 0;
   margin: 0;
+  font-size: .938rem;
 }
 
 ul, li {
@@ -30,4 +31,30 @@ h1 {
   line-height: 1.1;
   margin-bottom: 20px;
   text-align: center;
+}
+
+section {
+  position: relative;
+  overflow: hidden;
+  padding: 1.25rem 0;
+
+}
+
+.dark {
+  background: #f8f8f8;
+}
+
+.row {
+  padding: 2rem 0;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 80rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.turquoise-color {
+  color: $turquoise
 }

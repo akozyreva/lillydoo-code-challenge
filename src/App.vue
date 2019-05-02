@@ -12,6 +12,7 @@
       </div>
     </section>
     <InfoFunction/>
+    <PackComposition/>
   </div>
 </template>
 
@@ -21,6 +22,7 @@ import ImgDiaper from './components/ImgDiaper.vue'
 import ChoosePack from './components/ChoosePack.vue'
 import Teaser from './components/Teaser.vue'
 import InfoFunction from './components/InfoFunction.vue'
+import PackComposition from './components/PackComposition.vue'
 import { consoleMessage } from "./shared"
 
 export default {
@@ -29,7 +31,8 @@ export default {
     ImgDiaper,
     ChoosePack,
     Teaser,
-    InfoFunction
+    InfoFunction,
+    PackComposition
   },
    created() { consoleMessage() }
 }

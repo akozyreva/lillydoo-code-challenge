@@ -24,9 +24,6 @@ export default {
   },
   methods: {
     getImage(index) {
-      if (isNaN(index)){
-        index = 1
-      }
       return require(`@/assets/img/lillydoo-testpaket-${index}0.jpg`)
    }
  },
@@ -34,7 +31,10 @@ export default {
    this.$eventHub.$on('emittedEvent',  data => {
             this.position = data;
         });
-  }
+  },
+  created: function () {
+   this.position = 1
+ }
 }
 </script>
 

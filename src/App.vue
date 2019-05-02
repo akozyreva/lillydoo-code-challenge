@@ -21,6 +21,7 @@ import ImgDiaper from './components/ImgDiaper.vue'
 import ChoosePack from './components/ChoosePack.vue'
 import Teaser from './components/Teaser.vue'
 import InfoFunction from './components/InfoFunction.vue'
+import { consoleMessage } from "./shared"
 
 export default {
   name: 'app',
@@ -29,7 +30,8 @@ export default {
     ChoosePack,
     Teaser,
     InfoFunction
-  }
+  },
+   created() { consoleMessage() }
 }
 </script>
 

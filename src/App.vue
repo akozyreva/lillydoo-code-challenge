@@ -4,7 +4,8 @@
       <ImgDiaper :index=isActive+1></ImgDiaper>
     </div>
     <div class="right-wrapper">
-      <ChoosePack></ChoosePack>
+      <ChoosePack
+      ></ChoosePack>
     </div>
 <!--
     <img alt="Vue logo" src="./assets/logo.png">

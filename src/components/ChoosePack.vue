@@ -5,7 +5,7 @@
       <p class="subtitle">Wähle Deine Größe</p>
       <ul class="trial-pack-wrapper">
         <li v-for="(pack, index) in trialPacks" :key="index"
-         @click="isActive=index"
+         @click="ActivePack(index)"
          v-bind:class="{ active: isActive === index }"
         >
           <p>{{ index + 1}}</p>
@@ -29,11 +29,20 @@
 </template>
 
 <script>
+
 export default {
   data: function () {
    return {
      isActive: undefined,
      trialPacks: ['(2-3 KG)', '(3-4 KG)', '(4-7 KG)', '(7-10 KG)', '(10-12 KG)']
+   }
+ },
+ methods: {
+   ActivePack(index) {
+     console.log("was clicked")
+     this.isActive = index
+     console.log(this.isActive)
+      this.$eventHub.$emit('emittedEvent', index + 1);
    }
  }
 }

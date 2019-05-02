@@ -3,7 +3,7 @@
       <img alt="Oeko-Tex Certificate" src="@/assets/img/oekotex_de.png" class="oekotex-logo">
       <div class="wrapper-slider">
         <div class="slider">
-          <img :src="getImage(index)" alt="">
+          <img :src="getImage(position)" alt="">
         </div>
       </div>
     </div>
@@ -17,6 +17,11 @@ export default {
       type: Number
    }
   },
+  data () {
+  return {
+      position: this.index
+  }
+  },
   methods: {
     getImage(index) {
       if (isNaN(index)){
@@ -24,6 +29,11 @@ export default {
       }
       return require(`@/assets/img/lillydoo-testpaket-${index}0.jpg`)
    }
+ },
+ mounted () {
+   this.$eventHub.$on('emittedEvent',  data => {
+            this.position = data;
+        });
   }
 }
 </script>

@@ -1,5 +1,5 @@
 <template lang="html">
-    <div>
+    <div class="left-wrapper">
       <img alt="Oeko-Tex Certificate" src="@/assets/img/oekotex_de.png" class="oekotex-logo">
       <div class="wrapper-slider">
         <div class="slider">
@@ -43,7 +43,7 @@ export default {
     position: absolute;
     top: 10%;
     left: 9%;
-    z-index: 10%;
+    z-index: 10;
     width: 27%;
     max-width: 100%;
     display: inline-block;

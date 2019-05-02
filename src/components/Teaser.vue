@@ -1,5 +1,6 @@
 <template lang="html">
   <section class="trialbox-teaser">
+    <img alt="Oeko-Tex Certificate" src="@/assets/img/oekotex_de.png">
     <div class="row wrapper-teaser-button">
       <h1>Entdecke unsere Hautfreundlichkeit</h1>
       <div class="wrapper-button">
@@ -15,14 +16,22 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+img {
+  position: absolute;
+  width: 13%;
+  top: 3rem;
+  right: 4rem;
+}
+
 .trialbox-teaser {
   display: flex;
   justify-content: center;
   flex-direction: column;
   background-size: 100%;
   max-width: 100%;
-  height: 37vw;
-  min-height: 300px;
+  max-height: 37vw;
+  height: 100%;
+  min-height: 350px;
   max-height: 550px;
   background-repeat: no-repeat;
   background-image: url(~@/assets/img/lillydoo-testpaket-header-large.jpg);

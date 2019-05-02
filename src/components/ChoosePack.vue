@@ -1,5 +1,5 @@
 <template lang="html">
-  <div class="">
+  <div class="right-wrapper">
     <h2>Unser gratis Testpaket</h2>
     <div class="pack-container">
       <p class="subtitle">Wähle Deine Größe</p>

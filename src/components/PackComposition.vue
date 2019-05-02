@@ -44,7 +44,7 @@ export default {
         {
           id: 'diapers',
           title: '10 LILLYDOO WINDELN',
-          list: ['0 % Parfüme & Lotionen, 100 % LILLYDOO Schutz', '0 % Parfüme & Lotionen, 100 % LILLYDOO Schutz'],
+          list: ['0 % Parfüme & Lotionen, 100 % LILLYDOO Schutz', 'Extra weich und mit idealer Passform'],
           imgName: 'lillydoo-little-blowballs-design-preview-tp.jpg'
         },
         {

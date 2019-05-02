@@ -3,12 +3,8 @@
     <Teaser/>
     <section>
       <div class="row">
-        <div class="left-wrapper">
-          <ImgDiaper :index=isActive+1></ImgDiaper>
-        </div>
-        <div class="right-wrapper">
-          <ChoosePack></ChoosePack>
-        </div>
+          <ImgDiaper></ImgDiaper>
+          <ChoosePack/>
       </div>
     </section>
     <InfoFunction/>
@@ -50,12 +46,13 @@ export default {
     overflow: hidden;
     width: 50%;
     float: left;
+    margin-left: 2rem;
   }
 
   .right-wrapper,{
     width: 41%;
     float: right;
-
+    margin-right: 1rem;
   }
 
 }

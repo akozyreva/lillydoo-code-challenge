@@ -6,16 +6,22 @@
     <div class="row">
       <div class="wrapper-pack-compose">
         <div class="wraper-pack-compose-box" v-for="item in composes">
-          <div class="" v-if="item.id ==='napkins'">
+          <div class="wraper-pack-compose-box-img" v-if="item.id ==='napkins'">
                 <img :src="getImage(item.imgName1)" alt="">
           </div>
-          <div class="" v-else-if="item.id ==='diapers'">
+          <div class="wraper-pack-compose-box-img" v-else-if="item.id ==='diapers'">
                 <img :src="getImage(item.imgName)" alt="">
           </div>
-          <h4>{{ item.title }}</h4>
-          <ul v-for="point in item.list">
-            <li>{{ point }}</li>
-          </ul>
+          <div class="wrapper-pack-compose-box-text">
+            <h4>{{ item.title }}</h4>
+            <ul>
+              <li
+              v-for="point in item.list"
+              >
+                {{ point }}</li>
+            </ul>
+          </div>
+
       </div>
       </div>
     </div>
@@ -52,4 +58,25 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+  .wraper-pack-compose-box-img {
+    width: 25%;
+
+    img {
+      display: inline-block;
+      object-fit: contain;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .wrapper-pack-compose, .wraper-pack-compose-box {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+  }
+
+  .wraper-pack-compose-box, .wrapper-pack-compose-box-text {
+    margin-left: 2rem;
+  }
+
 </style>

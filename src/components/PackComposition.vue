@@ -6,8 +6,11 @@
     <div class="row">
       <div class="wrapper-pack-compose">
         <div class="wraper-pack-compose-box" v-for="item in composes">
-          <div class="wraper-pack-compose-box-img" v-if="item.id ==='napkins'">
+          <div class="wraper-pack-compose-box-img" v-if="item.id ==='napkins' && position < 4">
                 <img :src="getImage(item.imgName1)" alt="">
+          </div>
+          <div class="wraper-pack-compose-box-img" v-else-if="item.id ==='napkins' && position >= 4">
+                <img :src="getImage(item.imgName2)" alt="">
           </div>
           <div class="wraper-pack-compose-box-img" v-else-if="item.id ==='diapers'">
                 <img :src="getImage(item.imgName)" alt="">
@@ -30,6 +33,11 @@
 
 <script>
 export default {
+  props: {
+    index: {
+      type: Number
+   }
+  },
   data: function() {
     return {
       composes: [
@@ -46,8 +54,17 @@ export default {
           imgName1: 'water-wipes-15-small.jpg',
           imgName2: 'sensitive-wipes-15-small.jpg'
         }
-      ]
+      ],
+      position: this.index
     }
+  },
+  mounted () {
+    this.$eventHub.$on('emittedEvent',  data => {
+             this.position = data;
+         });
+   },
+   created: function () {
+    this.position = 1
   },
   methods: {
     getImage(imgName) {

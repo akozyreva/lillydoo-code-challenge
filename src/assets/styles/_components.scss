@@ -1,0 +1,36 @@
+%button-view {
+  width: 100%;
+  padding: 0 20px;
+  height: 45px;
+  min-width: 16rem;
+  text-transform: uppercase;
+  background-color: $turquoise;
+}
+
+%button-font {
+  font-size: 1.063rem;
+  color: #fff;
+}
+.wrapper-button {
+  margin: 2rem 0;
+  text-align: center;
+
+   a:hover, :hover {
+    cursor: pointer;
+    background-color: #99dfdd;
+  }
+
+  .button {
+    @extend %button-view;
+
+    span {
+      @extend %button-font;
+    }
+  }
+  a.button {
+      @extend %button-view;
+      @extend %button-font;
+      min-width: 295px;
+      padding: 14px 25px;
+  }
+}

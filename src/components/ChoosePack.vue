@@ -21,7 +21,7 @@
         </li>
     </ul>
     <div class="wrapper-button">
-      <button type="button" name="button">
+      <button type="button" name="button" class="button">
         <span>In den Warenkorb legen</span>
       </button>
     </div>
@@ -39,10 +39,8 @@ export default {
  },
  methods: {
    ActivePack(index) {
-     console.log("was clicked")
      this.isActive = index
-     console.log(this.isActive)
-      this.$eventHub.$emit('emittedEvent', index + 1);
+     this.$eventHub.$emit('emittedEvent', index + 1);
    }
  }
 }
@@ -113,27 +111,4 @@ ul.trial-pack-wrapper {
   }
 }
 
-.wrapper-button {
-  margin: 20px 0;
-
-   :hover {
-    cursor: pointer;
-    background-color: #99dfdd;
-  }
-
-  button {
-    width: 100%;
-    padding: 0 20px;
-    height: 45px;
-    min-width: 16rem;
-    text-transform: uppercase;
-    background-color: $turquoise;
-
-
-    span {
-      font-size: 1.063rem;
-      color: #fff;
-    }
-  }
-}
 </style>

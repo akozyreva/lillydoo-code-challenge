@@ -59,6 +59,18 @@ export default {
     width: 33%;
     padding: 1.5rem 0;
     margin: 0 5rem
+
+  }
+
+  @media screen and (max-width: $breakpoint-tablet) {
+    .wrapper-func {
+      justify-content: center;
+      flex-direction: column;
+
+      .wrapper-func-box {
+        margin: 0 auto;
+      }
+    }
   }
 }
 </style>

@@ -42,7 +42,7 @@ export default {
   img.oekotex-logo {
     position: absolute;
     top: 10%;
-    left: 9%;
+    left: 6%;
     z-index: 10;
     width: 27%;
     max-width: 100%;
@@ -53,12 +53,11 @@ export default {
   .slider {
     display: block;
     position: relative;
-    margin-top: -4%;
     z-index: -2;
     float: left;
 
     img {
-      max-width: 100%
+      max-width: 93%
     }
   }
 </style>

@@ -33,11 +33,6 @@
 
 <script>
 export default {
-  props: {
-    index: {
-      type: Number
-   }
-  },
   data: function() {
     return {
       composes: [
@@ -55,7 +50,7 @@ export default {
           imgName2: 'sensitive-wipes-15-small.jpg'
         }
       ],
-      position: this.index
+      position: 1
     }
   },
   mounted () {
@@ -63,9 +58,6 @@ export default {
              this.position = data;
          });
    },
-   created: function () {
-    this.position = 1
-  },
   methods: {
     getImage(imgName) {
       return require(`@/assets/img/${imgName}`)
@@ -116,5 +108,5 @@ export default {
     }
   }
 
-  
+
 </style>

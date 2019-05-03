@@ -12,14 +12,9 @@
 <script>
 export default {
   name: 'ImgDiaper',
-  props: {
-    index: {
-      type: Number
-   }
-  },
   data () {
   return {
-      position: this.index
+      position: 1
   }
   },
   methods: {
@@ -31,10 +26,7 @@ export default {
    this.$eventHub.$on('emittedEvent',  data => {
             this.position = data;
         });
-  },
-  created: function () {
-   this.position = 1
- }
+  }
 }
 </script>
 

@@ -6,7 +6,7 @@ module.exports = {
           @import "@/assets/styles/_variables.scss";
           @import "@/assets/styles/_components.scss";
           @import "@/assets/styles/_base.scss";
-          @import "@/assets/styles/_media-queries.scss";
+          @import "@/assets/styles/_mixins.scss";
         `
       }
     }

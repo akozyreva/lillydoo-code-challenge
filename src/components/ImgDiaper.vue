@@ -45,11 +45,8 @@ export default {
 }
 
   img.oekotex-logo {
-    position: absolute;
-    top: 10%;
-    left: 6%;
+    @include quality-sign(10%, 6%, 0, 27%);
     z-index: 10;
-    width: 27%;
     max-width: 100%;
     display: inline-block;
     height: auto;

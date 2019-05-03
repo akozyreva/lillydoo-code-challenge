@@ -1,6 +1,6 @@
 <template lang="html">
   <section class="trialbox-teaser">
-  <img alt="Oeko-Tex Certificate" src="@/assets/img/oekotex_de.png">
+  <img class="oekotex-logo" alt="Oeko-Tex Certificate" src="@/assets/img/oekotex_de.png">
     <div class="row wrapper-teaser-button">
       <h1>Entdecke unsere Hautfreundlichkeit</h1>
       <div class="wrapper-button">
@@ -16,16 +16,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-img {
-  position: absolute;
-  width: 13%;
-  top: 3rem;
-  right: 4rem;
+img.oekotex-logo {
+  @include quality-sign(3rem, none, 4rem, 13%);
 
   @include screen-md-min {
-    width: 20%;
-    top: 21rem;
-    right: 1rem;
+    @include quality-sign(21rem, none, 1rem, 20%);
   }
 
 }

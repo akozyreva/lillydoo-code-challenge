@@ -9,3 +9,11 @@
 @mixin screen-sm-min {
   @media (max-width: $screen-sm-min) { @content; }
 }
+
+@mixin quality-sign($top, $left, $right, $width) {
+  position: absolute;
+  top: $top;
+  left: $left;
+  right: $right;
+  width: $width;
+}

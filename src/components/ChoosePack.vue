@@ -128,9 +128,6 @@ ul.trial-pack-wrapper {
   font-size: .938rem;
   margin-bottom: 2rem;
 
-  .turquoise-color {
-    color: $turquoise;
-  }
 }
 
 </style>

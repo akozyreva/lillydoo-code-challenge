@@ -39,18 +39,11 @@ img.oekotex-logo {
   background-image: url(~@/assets/img/lillydoo-testpaket-header-large.jpg);
 
   @include screen-md-min {
-    background: url(~@/assets/img/lillydoo-testpaket-header-medium.jpg) no-repeat center center;
-    justify-content: initial;
-    //background-size: 122% 35rem;
-    background-size: cover;
-    height: 35rem;
-    //background-position-x: -5rem;
+    @include tease-img-responsive("~@/assets/img/lillydoo-testpaket-header-medium.jpg")
   }
 
   @include screen-sm-min {
-    background: url(~@/assets/img/lillydoo-testpaket-header-small.jpg) no-repeat center center;
-    background-size: cover;
-    height: 35rem;
+    @include tease-img-responsive("~@/assets/img/lillydoo-testpaket-header-small.jpg");
   }
 
 }

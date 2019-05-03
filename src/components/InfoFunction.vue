@@ -55,11 +55,24 @@ export default {
   display: flex;
   text-align: center;
 
+  @include screen-md-min {
+    justify-content: center;
+    flex-direction: column;
+  }
+
   .wrapper-func-box {
     width: 33%;
     padding: 1.5rem 0;
-    margin: 0 5rem
+    margin: 0 5rem;
 
+    @include screen-lg-min {
+        margin: 0;
+    }
+
+    @include screen-md-min {
+        margin: 0 auto;
+        width: 20rem;
+    }
   }
 }
 </style>

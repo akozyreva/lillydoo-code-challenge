@@ -34,9 +34,16 @@ export default {
 }
 </script>
 
-<style  lang="scss" scoped>
+<style  lang="scss">
+body {
+  padding: 0;
+  margin: 0;
+  font-size: .938rem;
+}
+
 #app {
   font-family: "Cera-Regular",Arial,sans-serif;
+  margin: 0;
 .row {
   @include screen-md-min {
     display: flex;

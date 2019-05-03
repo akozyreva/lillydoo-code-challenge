@@ -53,7 +53,7 @@ export default {
     margin-right: 1rem;
     @include screen-md-min {
       margin: 0 auto;
-      width: 100%;
+      width: 98%;
     }
   }
 %active-pack {

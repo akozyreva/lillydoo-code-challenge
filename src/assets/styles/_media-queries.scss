@@ -5,3 +5,7 @@
 @mixin screen-lg-min {
   @media (max-width: $screen-lg-min) { @content; }
 }
+
+@mixin screen-sm-min {
+  @media (max-width: $screen-sm-min) { @content; }
+}

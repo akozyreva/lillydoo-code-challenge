@@ -39,6 +39,19 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.left-wrapper{
+  position: relative;
+  overflow: hidden;
+  width: 50%;
+  float: left;
+  margin-left: 2rem;
+
+  @include screen-md-min {
+    margin: 0 auto;
+    width: 100%;
+  }
+}
+
   img.oekotex-logo {
     position: absolute;
     top: 10%;

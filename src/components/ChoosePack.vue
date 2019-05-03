@@ -47,6 +47,15 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+  .right-wrapper,{
+    width: 41%;
+    float: right;
+    margin-right: 1rem;
+    @include screen-md-min {
+      margin: 0 auto;
+      width: 100%;
+    }
+  }
 %active-pack {
   background-color: $turquoise;
   color: #fff;
@@ -71,6 +80,13 @@ ul.trial-pack-wrapper {
   margin: 0;
   line-height: 1.4;
 
+  @include screen-md-min {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: initial;
+  }
+
   > li:hover {
     @extend %active-pack;
     cursor: pointer;
@@ -84,6 +100,12 @@ ul.trial-pack-wrapper {
     padding: 7px 5px 2px 5px;
     margin-right: 10px;
     position: relative;
+
+    @include screen-md-min {
+      padding: 0;
+      margin-bottom: 2%;
+      margin-right: 2%;
+    }
 
     p {
       font-size: 1.3rem;

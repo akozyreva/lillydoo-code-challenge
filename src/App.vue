@@ -34,26 +34,15 @@ export default {
 }
 </script>
 
-<style  lang="scss">
-
-
+<style  lang="scss" scoped>
 #app {
   font-family: "Cera-Regular",Arial,sans-serif;
-
-
-  .left-wrapper{
-    position: relative;
-    overflow: hidden;
-    width: 50%;
-    float: left;
-    margin-left: 2rem;
+.row {
+  @include screen-md-min {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
   }
-
-  .right-wrapper,{
-    width: 41%;
-    float: right;
-    margin-right: 1rem;
-  }
-
+}
 }
 </style>

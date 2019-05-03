@@ -76,13 +76,21 @@ export default {
 
 <style lang="scss" scoped>
   .wraper-pack-compose-box-img {
-    width: 25%;
+    width: 13rem;
 
     img {
       display: inline-block;
       object-fit: contain;
       width: 100%;
       height: 100%;
+    }
+  }
+
+  .wrapper-pack-compose {
+    @include screen-md-min {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
     }
   }
 
@@ -96,4 +104,17 @@ export default {
     margin-left: 2rem;
   }
 
+  .wraper-pack-compose-box {
+    @include screen-md-min {
+      margin-left: 0;
+    }
+  }
+  .wraper-pack-compose-box-text {
+    @include screen-md-min {
+      margin-left: 1rem;
+      padding: 1rem;
+    }
+  }
+
+  
 </style>

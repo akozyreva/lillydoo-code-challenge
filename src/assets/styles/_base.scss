@@ -1,3 +1,4 @@
+@import "_media-queries.scss";
 h2 {
   font-size: 1.688rem;
   line-height: 1.2;
@@ -49,6 +50,9 @@ section {
   margin: 0 auto;
   width: 100%;
   max-width: 80rem;
+  @include screen-md-min {
+    padding: 0;
+  }
 }
 
 .text-center {
@@ -57,4 +61,7 @@ section {
 
 .turquoise-color {
   color: $turquoise
+}
+h4 {
+  margin-left: -20px;
 }
